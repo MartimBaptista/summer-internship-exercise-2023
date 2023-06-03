@@ -60,4 +60,23 @@ public class SnailShellPatternTest {
     }
     assertArrayEquals(expected, result);
   }
+
+  @Test
+  public void MalformedMatrixTest()
+      throws InterruptedException, ExecutionException, TimeoutException {
+    int[][] matrix1 = {};
+    int[][] matrix2 = {{}};
+    int[][] matrix3 = {{1},{2}};
+    Future<int[]> count1 = new SnailShellPattern().getSnailShell(matrix1);
+    Future<int[]> count2 = new SnailShellPattern().getSnailShell(matrix2);
+    Future<int[]> count3 = new SnailShellPattern().getSnailShell(matrix3);
+
+    int[] result1 = count1.get(10, TimeUnit.SECONDS);
+    int[] result2 = count2.get(10, TimeUnit.SECONDS);
+    int[] result3 = count3.get(10, TimeUnit.SECONDS);
+    int[] expected = {};
+    assertArrayEquals(expected, result1);
+    assertArrayEquals(expected, result2);
+    assertArrayEquals(expected, result3);
+  }
 }
