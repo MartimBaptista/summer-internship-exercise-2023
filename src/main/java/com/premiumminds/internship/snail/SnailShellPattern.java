@@ -31,7 +31,7 @@ class SnailShellPattern implements ISnailShellPattern {
       int shrinkage = 0;
       while(shrinkage * 2 < matrix.length){
 
-        //shrikage verversed (used like shrinkage but for the right and bottom side of the snail)
+        //shrinkage reversed (used like shrinkage but for the right and bottom side of the snail)
         int revShrinkage = matrix.length - shrinkage - 1;
 
         //Moving right (Top side)
