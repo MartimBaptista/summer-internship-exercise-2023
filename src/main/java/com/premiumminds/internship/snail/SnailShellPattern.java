@@ -56,7 +56,7 @@ class SnailShellPattern implements ISnailShellPattern {
 
         shrinkage++;
         //* Right, Bottom and Left side i counters start with an ofset of 1 
-        // to jump over the corner values that were read by the previous movement
+        // to skip the corner values that were read by the previous movement
       }
 
       return res;
